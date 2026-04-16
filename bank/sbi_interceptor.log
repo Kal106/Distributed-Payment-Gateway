@@ -1,0 +1,82 @@
+2025-03-17 01:09:38,016 - INFO - Request for /p3.Bank/Authenticate: username: "user01"
+bank_name: "sbi"
+password: "fa66ed652b77f7a4bbc9e07201ea3e37cdef4e8e130890b137aa5f55a65af1d0"
+
+2025-03-17 01:09:38,016 - INFO - Response for /p3.Bank/Authenticate: success: true
+
+2025-03-17 01:09:45,356 - INFO - Request for /p3.Bank/ViewBalance: username: "user01"
+bank_name: "sbi"
+password: "fa66ed652b77f7a4bbc9e07201ea3e37cdef4e8e130890b137aa5f55a65af1d0"
+
+2025-03-17 01:09:45,356 - INFO - Response for /p3.Bank/ViewBalance: balance: 100000
+ack {
+  success: true
+}
+
+2025-03-17 01:10:29,845 - INFO - Request for /p3.Bank/PrepareCredit: transaction_id: "a4435d7d-bb77-41b5-8dd6-3ef355dad0a4_credit"
+username: "user01"
+amount: 100
+from_bank: "icici"
+from_username: "user01"
+
+2025-03-17 01:10:29,845 - INFO - Response for /p3.Bank/PrepareCredit: success: true
+
+2025-03-17 01:10:29,847 - INFO - Request for /p3.Bank/CommitCredit: transaction_id: "a4435d7d-bb77-41b5-8dd6-3ef355dad0a4_credit"
+username: "user01"
+amount: 100
+from_bank: "icici"
+from_username: "user01"
+
+2025-03-17 01:10:29,847 - INFO - Response for /p3.Bank/CommitCredit: success: true
+
+2025-03-17 01:10:29,907 - INFO - Request for /p3.Bank/PrepareDebit: transaction_id: "dce1df88-d0df-4141-bae4-d9cfd3c9a8f9_debit"
+username: "user01"
+password: "fa66ed652b77f7a4bbc9e07201ea3e37cdef4e8e130890b137aa5f55a65af1d0"
+amount: 100
+to_bank: "icici"
+to_username: "user01"
+
+2025-03-17 01:10:29,907 - INFO - Response for /p3.Bank/PrepareDebit: success: true
+
+2025-03-17 01:10:29,917 - INFO - Request for /p3.Bank/CommitDebit: transaction_id: "dce1df88-d0df-4141-bae4-d9cfd3c9a8f9_debit"
+username: "user01"
+password: "fa66ed652b77f7a4bbc9e07201ea3e37cdef4e8e130890b137aa5f55a65af1d0"
+amount: 100
+to_bank: "icici"
+to_username: "user01"
+
+2025-03-17 01:10:29,917 - INFO - Response for /p3.Bank/CommitDebit: success: true
+
+2025-03-17 01:10:35,887 - INFO - Request for /p3.Bank/ViewBalance: username: "user01"
+bank_name: "sbi"
+password: "fa66ed652b77f7a4bbc9e07201ea3e37cdef4e8e130890b137aa5f55a65af1d0"
+
+2025-03-17 01:10:35,887 - INFO - Response for /p3.Bank/ViewBalance: balance: 100000
+ack {
+  success: true
+}
+
+2025-03-17 01:10:40,389 - INFO - Request for /p3.Bank/TransactionHistory: username: "user01"
+bank_name: "sbi"
+password: "fa66ed652b77f7a4bbc9e07201ea3e37cdef4e8e130890b137aa5f55a65af1d0"
+
+2025-03-17 01:10:40,390 - INFO - Response for /p3.Bank/TransactionHistory: transactions {
+  transaction_id: "a4435d7d-bb77-41b5-8dd6-3ef355dad0a4_credit"
+  username: "user01"
+  other_username: "user01"
+  other_bank: "icici"
+  amount: 100
+  type: "credit"
+}
+transactions {
+  transaction_id: "dce1df88-d0df-4141-bae4-d9cfd3c9a8f9_debit"
+  username: "user01"
+  other_username: "user01"
+  other_bank: "icici"
+  amount: 100
+  type: "debit"
+}
+ack {
+  success: true
+}
+
