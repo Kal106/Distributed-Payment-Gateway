@@ -147,10 +147,6 @@ The gateway (`gateway.py`) serves as the central coordinator between clients and
 
 
 --- 
-
-**AI Tools Links**
-[Link1](https://grok.com/share/bGVnYWN5_7b14517e-2c2a-4e51-bd09-3445622801c6) - Report Generation
-[Link2](https://chatgpt.com/share/67d73053-8d70-800e-9c01-7df874e1113f) - Implementing Logging Interceptor
 ___
 
 
